@@ -1,0 +1,40 @@
+<div>
+    <mat-toolbar class="mat-elevation-z2 fixed-top">
+        <mat-toolbar-row class="container">
+            <button mat-stroked-button color="primary" class="home-button" [routerLink]="['/home']">
+                <mat-icon>home</mat-icon>
+                Kantan-Fu
+            </button>
+            <span class="icon-spacer"></span>
+            <button mat-stroked-button color="primary" class="menu-button" [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+                <ng-template matMenuContent>
+                    <button mat-menu-item [routerLink]="['/tests']">
+                        <mat-icon>border_color</mat-icon>
+                        Tests
+                    </button>
+                    <button mat-menu-item [routerLink]="['/lessons']">
+                        <mat-icon>spellcheck</mat-icon>
+                        Lessons
+                    </button>
+                    <button mat-menu-item [routerLink]="['/topics']">
+                        <mat-icon>bookmark</mat-icon>
+                        Topics
+                    </button>
+                </ng-template>
+            </mat-menu>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>
+<div class="content container">
+    <router-outlet></router-outlet>
+</div>
+<div class="container">
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <span>Kantan-Fu Footer</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>

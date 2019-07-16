@@ -1,0 +1,30 @@
+@import '../theme.scss';
+
+span{
+  color: $primary-color;
+}
+
+.icon {
+  padding: 0 14px;
+}
+
+.icon-spacer {
+  flex: 1 auto;
+}
+
+.content {
+  padding-top: 5.0em;
+  min-height: 615px;
+}
+
+.home-button {
+  border-color: $primary-color !important; 
+  height: 40px;
+  font-size: 20px;
+}
+
+.menu-button {
+  border-color: $primary-color !important; 
+  height: 40px;
+  font-size: 20px;
+}
