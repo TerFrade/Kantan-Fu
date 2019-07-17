@@ -1,11 +1,11 @@
 <div>
     <mat-toolbar class="mat-elevation-z2 fixed-top">
         <mat-toolbar-row class="container">
-            <button mat-stroked-button color="primary" class="home-button" [routerLink]="['/home']">
+            <button mat-stroked-button color="primary" class="menu-button" [routerLink]="['/home']">
                 <mat-icon>home</mat-icon>
                 Kantan-Fu
             </button>
-            <span class="icon-spacer"></span>
+            <span class="spacer"></span>
             <button mat-stroked-button color="primary" class="menu-button" [matMenuTriggerFor]="menu">
                 <mat-icon>menu</mat-icon>
             </button>
@@ -38,3 +38,20 @@
         </mat-toolbar-row>
     </mat-toolbar>
 </div>
+
+
+
+<!--   
+    <button mat-stroked-button color="primary" class="menu-button" [routerLink]="['/tests']">
+            <mat-icon>border_color</mat-icon> 
+        Tests
+    </button>
+    <button mat-stroked-button color="primary" class="menu-button" [routerLink]="['/lessons']">
+        <mat-icon>spellcheck</mat-icon> 
+        Lessons
+    </button>
+    <button mat-stroked-button color="primary" class="menu-button" [routerLink]="['/topics']">
+        <mat-icon>bookmark</mat-icon> 
+        Topics
+    </button>  
+-->
