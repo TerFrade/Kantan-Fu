@@ -1,0 +1,17 @@
+@import '../../theme.scss';
+
+mat-form-field{
+    width: 100%;
+}
+
+.login-button{
+    border-color: $primary-color !important; 
+}
+
+.spacer{
+    flex: 1 auto;
+}
+
+h1{
+    color: $primary-color !important;
+}

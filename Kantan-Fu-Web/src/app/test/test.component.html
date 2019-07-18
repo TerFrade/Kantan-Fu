@@ -1,10 +1,13 @@
-<mat-card style="margin-bottom: 20px;">
+<mat-card style="margin-bottom: 20px;" *ngFor="let dummy of ' '.repeat(9).split('')">
     <mat-card-header>
         <mat-icon mat-card-avatar style="font-size: 50px;">bubble_chart</mat-icon>
-        <mat-card-title>Hello World</mat-card-title>
-        <mat-card-subtitle>Hello World</mat-card-subtitle>
+        <mat-card-title>Hello Tests</mat-card-title>
+        <mat-card-subtitle>Hello Tests</mat-card-subtitle>
         <span class="spacer"></span>
-        <mat-icon>bookmark</mat-icon>
-        <mat-icon>bookmark</mat-icon>
+        <mat-card-actions>
+            <button mat-icon-button color="primary">
+                <mat-icon>visibility</mat-icon>
+            </button>
+        </mat-card-actions>
     </mat-card-header>
 </mat-card>

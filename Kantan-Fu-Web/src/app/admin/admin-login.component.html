@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Please Login.</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Username" [(ngModel)]="adminData.username">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" placeholder="Password" [(ngModel)]="adminData.password">
+    </mat-form-field>
+    <mat-error *ngIf="badLogin">
+        Incorrect user <strong>details!</strong>
+    </mat-error>
+</div>
+<div mat-dialog-actions>
+    <button mat-stroked-button (click)="back()">Back</button>
+    <span class="spacer"></span>
+    <button mat-stroked-button color="primary" class="login-button" (click)="login()">Login</button>
+</div>

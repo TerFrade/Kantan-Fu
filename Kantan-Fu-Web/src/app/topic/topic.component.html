@@ -1,1 +1,13 @@
-<p>topic works!</p>
+<mat-card style="margin-bottom: 20px;" *ngFor="let dummy of ' '.repeat(9).split('')">
+    <mat-card-header>
+        <mat-icon mat-card-avatar style="font-size: 50px;">bubble_chart</mat-icon>
+        <mat-card-title>Hello Topics</mat-card-title>
+        <mat-card-subtitle>Hello Topics</mat-card-subtitle>
+        <span class="spacer"></span>
+        <mat-card-actions>
+            <button mat-icon-button color="primary">
+                <mat-icon>visibility</mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card-header>
+</mat-card>
