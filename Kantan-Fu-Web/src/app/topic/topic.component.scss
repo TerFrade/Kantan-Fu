@@ -1,9 +1,12 @@
 @import '../../theme.scss';
 
-mat-card-title, mat-icon  {
-    color: $primary-color !important;
-  }
 
-  .spacer {
-    flex: 1 auto;
+  a, mat-icon  {
+    color: $primary-color !important;
+    text-decoration: none;
+  }
+  
+  p{
+    max-height: 100px;
+    overflow: hidden;
   }

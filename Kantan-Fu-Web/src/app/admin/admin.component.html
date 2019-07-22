@@ -1,1 +1,30 @@
-<p>asdasdasd</p>
+<div class="container">
+    <mat-form-field style="margin-bottom: 50px;">
+        <mat-label>Select what you will create</mat-label>
+        <mat-select [(ngModel)]="adminCreateType">
+            <mat-option value="tests">Tests</mat-option>
+            <mat-option value="lessons">Lessons</mat-option>
+            <mat-option value="topics">Topics</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+    <div *ngIf="adminCreateType=='tests'">
+        <mat-form-field>
+            <input matInput placeholder="Tests Name" [(ngModel)]="adminDetails.username">
+        </mat-form-field>
+    </div>
+    <div *ngIf="adminCreateType=='lessons'">
+        <mat-form-field>
+            <input matInput placeholder="Input">
+        </mat-form-field>
+    </div>
+    <div *ngIf="adminCreateType=='topics'">
+        <mat-form-field>
+            <input matInput placeholder="Topic Name" [(ngModel)]="adminDetails.username">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Topic Description" [(ngModel)]="adminDetails.username">
+        </mat-form-field>
+    </div>
+</div>

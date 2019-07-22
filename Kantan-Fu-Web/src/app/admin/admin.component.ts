@@ -12,6 +12,8 @@ import { toBase64String } from '@angular/compiler/src/output/source_map';
 export class AdminComponent implements OnInit {
   adminDetails: any;
 
+  adminCreateType: string;
+
   constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
@@ -47,7 +49,7 @@ export class AdminComponent implements OnInit {
 })
 export class AdminLoginComponent {
 
-  adminData: any = {
+  adminDetails: any = {
     name: "Boetie",
     username: "",
     password: ""
@@ -58,10 +60,11 @@ export class AdminLoginComponent {
   constructor(private dialogRef: MatDialogRef<AdminLoginComponent>, private location: Location) { }
 
   login() {
-    if (btoa(this.adminData.username) != "RGFycmVs" && btoa(this.adminData.password) != "MjU2ODRtZ3Q=") {
+    if (btoa(this.adminDetails.username) != "RGFycmVs" && btoa(this.adminDetails.password) != "MjU2ODRtZ3Q=") {
       this.badLogin = true;
     } else {
-      localStorage.setItem("adminData", JSON.stringify(this.adminData));
+      localStorage.setItem("adminDetails", JSON.stringify(this.adminDetails));
+      window.location.reload();
       this.dialogRef.close();
     }
   }

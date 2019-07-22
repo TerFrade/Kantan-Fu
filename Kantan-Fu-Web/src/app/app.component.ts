@@ -8,12 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   isAdmin: boolean = false;
-
   constructor() { }
 
   ngOnInit() {
-    console.log("hello")
     this.isAdmin = localStorage.getItem("adminData") ? true : false;
   }
-
 }

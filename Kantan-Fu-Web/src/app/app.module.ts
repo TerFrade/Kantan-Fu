@@ -15,6 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 // Components -> imports
 import { AppComponent } from './app.component';
@@ -42,6 +43,7 @@ import { AdminComponent, AdminLoginComponent } from './admin/admin.component';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
 
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
