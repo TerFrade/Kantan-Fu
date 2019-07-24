@@ -23,32 +23,34 @@ namespace Kantan_Fu_Api.DTOs
 
         public void UpdateModel(Topic data)
         {
-            if (Name !=null) { data.Name = Name; }
+            if (Name != null) { data.Name = Name; }
             if (Description != null) { data.Description = Description; }
-            if (Lessons != null) {
-                if (data.Lessons == null) { data.Lessons = new List<TestQuestion>(); }
-                foreach (var existing in data.Questions.ToArray())
+            if (Lessons != null)
+            {
+                if (data.Lessons == null) { data.Lessons = new List<Lesson>(); }
+                foreach (var existing in data.Lessons.ToArray())
                 {
-                    if (!Questions.Any(x => x.Id == existing.Id)) { data.Questions.Remove(existing); }
+                    if (!Lessons.Any(x => x.Id == existing.Id)) { data.Lessons.Remove(existing); }
                 }
-                foreach (var adding in Questions)
+                foreach (var adding in Lessons)
                 {
-                    //var obj = data.Questions.Any(x => x.Id == adding.Id);
-                    var obj = data.Questions.FirstOrDefault(x => x.Id == adding.Id);
+                    var obj = data.Lessons.FirstOrDefault(x => x.Id == adding.Id);
                     if (obj != null)
                     {
                         adding.UpdateModel(obj);
                         continue;
                     }
 
-                    data.Questions.Add(new TestQuestion()
+                    data.Lessons.Add(new Lesson()
                     {
-                        Order = adding.Order.Value,
-                        QuestionId = adding.Question.Id,
-                        TestId = data.Id,
-                        Answer = adding.Answer
+                        Name = adding.Name,
+                        Description = adding.Description,
+                        Sections = adding.Sections,
+                        TopicId = adding.Topic.Id,
+                        Topic = data as Topic
                     });
                 }
+            }
         }
     }
 }
