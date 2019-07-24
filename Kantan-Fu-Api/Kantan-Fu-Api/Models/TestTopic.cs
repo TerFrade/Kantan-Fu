@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Kantan_Fu_Api.Models
 {
-    public class Lesson
+    public class TestTopic
     {
-        [Key] public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Sections { get; set; }
+        public Guid TestId { get; set; }
+        [Required, ForeignKey("TestId")] public Test Test { get; set; }
         public int TopicId { get; set; }
         [Required, ForeignKey("TopicId")] public Topic Topic { get; set; }
     }
